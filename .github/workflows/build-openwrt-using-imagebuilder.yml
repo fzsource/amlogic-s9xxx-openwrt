@@ -128,6 +128,7 @@ on:
           - rk3318-box
           - rock-5-itx
           - rock-3b
+          - rock-3c
           - rock5b
           - rock5c
           - ruisen-box
@@ -219,6 +220,7 @@ on:
           - s922x-reva
           - s922x-ugoos-am6
           - seewo-sv21
+          - seewo-sv50
           - smart-am40
           - smart-am60
           - station-m1
