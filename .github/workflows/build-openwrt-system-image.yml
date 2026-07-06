@@ -59,6 +59,7 @@ on:
           - crrc
           - dc-a588
           - dg3399
+          - dg-nas-lite
           - dg-tn3568
           - dlfr100
           - e20c
@@ -115,6 +116,7 @@ on:
           - orangepi-3b
           - orangepi-5-plus
           - orangepi-5-pro
+          - orangepi-5-ultra
           - orangepi-5b
           - orangepi-zero3
           - painet-p3
@@ -337,6 +339,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-24.04
     if: ${{ github.event.repository.owner.id == github.event.sender.id }}
+    permissions:
+      contents: write
 
     strategy:
       fail-fast: false
