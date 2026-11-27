@@ -494,16 +494,12 @@ jobs:
           chmod +x ${DIY_P2_SH}
           cd openwrt/
           ${{ github.workspace }}/${DIY_P2_SH} "${{ inputs.openwrt_ip }}" "${{ inputs.use_ccache }}"
-          # ========== 新增：make olddefconfig 关键命令 ==========
-          make olddefconfig
-          # =====================================================
 
       - name: Download package
         id: package
         run: |
           cd openwrt/
-          # 【重要】删掉原来的 make defconfig！它会清空你的自定义配置
-          # make defconfig
+          make defconfig
           make download -j8
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
